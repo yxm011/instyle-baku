@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, Search, X, ShoppingBag } from 'lucide-react'
+import { Menu, Search, X, ShoppingBag, User } from 'lucide-react'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
 
 const categories = [
   { name: 'Köynəklər', slug: 'koynekler' },
@@ -17,6 +18,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const { getCartCount } = useCart()
+  const { currentUser } = useAuth()
   const cartCount = getCartCount()
 
   return (
@@ -62,6 +64,22 @@ export default function Navbar() {
                 </span>
               )}
             </Link>
+            {currentUser ? (
+              <Link
+                to="/profile"
+                className="p-2 luxury-hover relative"
+                aria-label="Profil"
+              >
+                <User size={24} />
+              </Link>
+            ) : (
+              <Link
+                to="/login"
+                className="px-4 py-2 text-sm luxury-hover font-light tracking-wider hidden sm:block"
+              >
+                GİRİŞ
+              </Link>
+            )}
           </div>
         </div>
 

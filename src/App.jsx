@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { AuthProvider } from './context/AuthContext'
 import { CartProvider } from './context/CartContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -9,6 +10,9 @@ import CategoryPage from './pages/CategoryPage'
 import LocationsPage from './pages/LocationsPage'
 import CartPage from './pages/CartPage'
 import ProductPage from './pages/ProductPage'
+import LoginPage from './pages/LoginPage'
+import SignupPage from './pages/SignupPage'
+import ProfilePage from './pages/ProfilePage'
 
 function PageWrapper() {
   const location = useLocation()
@@ -42,6 +46,9 @@ function PageWrapper() {
           <Route path="/product/:productId" element={<ProductPage />} />
           <Route path="/locations" element={<LocationsPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </main>
       <Footer />
@@ -53,11 +60,13 @@ function PageWrapper() {
 function App() {
   return (
     <Router>
-      <CartProvider>
-        <div className="min-h-screen flex flex-col bg-white">
-          <PageWrapper />
-        </div>
-      </CartProvider>
+      <AuthProvider>
+        <CartProvider>
+          <div className="min-h-screen flex flex-col bg-white">
+            <PageWrapper />
+          </div>
+        </CartProvider>
+      </AuthProvider>
     </Router>
   )
 }
