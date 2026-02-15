@@ -64,7 +64,7 @@ export default function HomePage() {
           </h2>
           <div className="h-px w-32 bg-luxury-gold mx-auto mb-8"></div>
           <p className="text-lg md:text-xl font-light max-w-2xl mx-auto mb-8 drop-shadow-md">
-            Dəyərli müştərilərimiz bütün filiallarımız hər gün saat 10:00-dan 22:00-dək fəaliyyət göstərir
+            Bütün filiallarımız hər gün saat 10:00-dan 22:00-dək fəaliyyət göstərir
           </p>
           <Link
             to="/locations"
