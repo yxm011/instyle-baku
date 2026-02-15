@@ -35,7 +35,7 @@ export default function Navbar() {
 
           <div className="flex-1 flex justify-center">
             <Link to="/" className="flex flex-col items-center">
-              <h1 className="text-lg sm:text-xl md:text-3xl font-serif font-semibold tracking-wider text-luxury-dark">
+              <h1 className="text-base sm:text-xl md:text-3xl font-serif font-semibold tracking-wider text-luxury-dark">
                 STYLE İN BAKU
               </h1>
               <div className="h-px w-16 bg-luxury-gold mt-1"></div>
