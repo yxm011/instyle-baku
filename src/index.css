@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-luxury-dark antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .luxury-border {
+    @apply border-luxury-gold/20;
+  }
+  
+  .luxury-hover {
+    @apply transition-all duration-300 hover:text-luxury-gold;
+  }
+}
