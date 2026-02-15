@@ -1,13 +1,48 @@
 import { Link } from 'react-router-dom'
 
 const categories = [
-  { name: 'Köynəklər', slug: 'koynekler', description: 'Premium kişi köynəkləri' },
-  { name: 'Şalvarlar', slug: 'salvarlar', description: 'Klassik və casual şalvarlar' },
-  { name: 'Pencəklər', slug: 'pencekler', description: 'Müasir pencək kolleksiyası' },
-  { name: 'Ayaqqabılar', slug: 'ayaqqabilar', description: 'Keyfiyyətli kişi ayaqqabıları' },
-  { name: 'Blazerlər', slug: 'blazerler', description: 'Zərif blazer və pencək' },
-  { name: 'Gödəkçələr', slug: 'godekceler', description: 'Qış və mövsümi gödəkçələr' },
-  { name: 'Aksessuarlar', slug: 'aksessuarlar', description: 'Kəmər, saatlar və daha çox' },
+  { 
+    name: 'Köynəklər', 
+    slug: 'koynekler', 
+    description: 'Premium kişi köynəkləri',
+    image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=80'
+  },
+  { 
+    name: 'Şalvarlar', 
+    slug: 'salvarlar', 
+    description: 'Klassik və casual şalvarlar',
+    image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&q=80'
+  },
+  { 
+    name: 'Pencəklər', 
+    slug: 'pencekler', 
+    description: 'Müasir pencək kolleksiyası',
+    image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80'
+  },
+  { 
+    name: 'Ayaqqabılar', 
+    slug: 'ayaqqabilar', 
+    description: 'Keyfiyyətli kişi ayaqqabıları',
+    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&q=80'
+  },
+  { 
+    name: 'Blazerlər', 
+    slug: 'blazerler', 
+    description: 'Zərif blazer və pencək',
+    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80'
+  },
+  { 
+    name: 'Gödəkçələr', 
+    slug: 'godekceler', 
+    description: 'Qış və mövsümi gödəkçələr',
+    image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80'
+  },
+  { 
+    name: 'Aksessuarlar', 
+    slug: 'aksessuarlar', 
+    description: 'Kəmər, saatlar və daha çox',
+    image: 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=800&q=80'
+  },
 ]
 
 export default function HomePage() {
@@ -54,9 +89,12 @@ export default function HomePage() {
               className="group"
             >
               <div className="aspect-[3/4] bg-luxury-gray mb-4 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform duration-500">
-                  <span className="text-sm font-light">{category.name}</span>
-                </div>
+                <img 
+                  src={category.image} 
+                  alt={category.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
               </div>
               <h4 className="text-xl font-serif mb-2 luxury-hover">{category.name}</h4>
               <p className="text-gray-600 font-light text-sm">{category.description}</p>
