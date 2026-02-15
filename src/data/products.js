@@ -3,7 +3,7 @@ const categoryData = {
     name: 'Köynəklər', 
     count: 24, 
     priceRange: [45, 85],
-    imageBase: 'https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=800&q=80' // premium men's shirts
+    imageBase: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=80' // premium men's shirts
   },
   salvarlar: { 
     name: 'Şalvarlar', 
@@ -15,7 +15,7 @@ const categoryData = {
     name: 'Pencəklər', 
     count: 16, 
     priceRange: [35, 65],
-    imageBase: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&q=80' // designer t-shirts
+    imageBase: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80' // designer t-shirts
   },
   ayaqqabilar: { 
     name: 'Ayaqqabılar', 

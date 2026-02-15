@@ -5,7 +5,7 @@ const categories = [
     name: 'Köynəklər', 
     slug: 'koynekler', 
     description: 'Premium kişi köynəkləri',
-    image: 'https://images.unsplash.com/photo-1598032895397-b9c259f93b0c?w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&q=80'
   },
   { 
     name: 'Şalvarlar', 
@@ -17,7 +17,7 @@ const categories = [
     name: 'Pencəklər', 
     slug: 'pencekler', 
     description: 'Müasir pencək kolleksiyası',
-    image: 'https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80'
   },
   { 
     name: 'Ayaqqabılar', 
