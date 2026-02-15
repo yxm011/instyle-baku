@@ -3,43 +3,43 @@ const categoryData = {
     name: 'Köynəklər', 
     count: 24, 
     priceRange: [45, 85],
-    imageBase: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&q=80' // men's shirts
+    imageBase: 'https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=800&q=80' // premium men's shirts
   },
   salvarlar: { 
     name: 'Şalvarlar', 
     count: 18, 
     priceRange: [55, 95],
-    imageBase: 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&q=80' // men's trousers
+    imageBase: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80' // luxury trousers
   },
   pencekler: { 
     name: 'Pencəklər', 
     count: 16, 
     priceRange: [35, 65],
-    imageBase: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80' // men's t-shirts
+    imageBase: 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&q=80' // designer t-shirts
   },
   ayaqqabilar: { 
     name: 'Ayaqqabılar', 
     count: 20, 
     priceRange: [70, 150],
-    imageBase: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80' // men's shoes
+    imageBase: 'https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=800&q=80' // luxury shoes
   },
   blazerler: { 
     name: 'Blazerlər', 
     count: 12, 
     priceRange: [120, 200],
-    imageBase: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80' // men's blazers
+    imageBase: 'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=800&q=80' // premium blazers
   },
   godekceler: { 
     name: 'Gödəkçələr', 
     count: 15, 
     priceRange: [100, 180],
-    imageBase: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80' // men's jackets
+    imageBase: 'https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800&q=80' // designer jackets
   },
   aksessuarlar: { 
     name: 'Aksessuarlar', 
     count: 30, 
     priceRange: [15, 50],
-    imageBase: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&q=80' // men's accessories
+    imageBase: 'https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=800&q=80' // luxury accessories
   },
 }
 

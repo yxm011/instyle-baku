@@ -5,43 +5,43 @@ const categories = [
     name: 'Köynəklər', 
     slug: 'koynekler', 
     description: 'Premium kişi köynəkləri',
-    image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1598032895397-b9c259f93b0c?w=800&q=80'
   },
   { 
     name: 'Şalvarlar', 
     slug: 'salvarlar', 
     description: 'Klassik və casual şalvarlar',
-    image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=800&q=80'
   },
   { 
     name: 'Pencəklər', 
     slug: 'pencekler', 
     description: 'Müasir pencək kolleksiyası',
-    image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=800&q=80'
   },
   { 
     name: 'Ayaqqabılar', 
     slug: 'ayaqqabilar', 
     description: 'Keyfiyyətli kişi ayaqqabıları',
-    image: 'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=800&q=80'
   },
   { 
     name: 'Blazerlər', 
     slug: 'blazerler', 
     description: 'Zərif blazer və pencək',
-    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=800&q=80'
   },
   { 
     name: 'Gödəkçələr', 
     slug: 'godekceler', 
     description: 'Qış və mövsümi gödəkçələr',
-    image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=800&q=80'
   },
   { 
     name: 'Aksessuarlar', 
     slug: 'aksessuarlar', 
     description: 'Kəmər, saatlar və daha çox',
-    image: 'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=800&q=80'
   },
 ]
 
