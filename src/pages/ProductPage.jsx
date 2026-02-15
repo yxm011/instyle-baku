@@ -61,11 +61,9 @@ export default function ProductPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="aspect-[3/4] bg-luxury-gray relative overflow-hidden">
-            <img 
-              src={product.image} 
-              alt={product.name}
-              className="w-full h-full object-cover"
-            />
+            <div className="w-full h-full flex items-center justify-center text-gray-400">
+              <span className="text-lg font-light">Məhsul Şəkli</span>
+            </div>
             {isInCart && (
               <div className="absolute top-4 right-4 bg-green-500 text-white rounded-full p-2">
                 <Check size={24} />

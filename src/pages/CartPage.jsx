@@ -69,11 +69,9 @@ export default function CartPage() {
                 className="flex gap-4 p-4 border luxury-border hover:shadow-md transition-shadow"
               >
                 <div className="w-24 h-24 bg-luxury-gray flex-shrink-0 overflow-hidden">
-                  <img 
-                    src={item.image} 
-                    alt={item.name}
-                    className="w-full h-full object-cover"
-                  />
+                  <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">
+                    Şəkil
+                  </div>
                 </div>
 
                 <div className="flex-grow">

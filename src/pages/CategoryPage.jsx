@@ -48,12 +48,9 @@ export default function CategoryPage() {
           <div key={product.id} className="group">
             <Link to={`/product/${product.id}`}>
               <div className="aspect-[3/4] bg-luxury-gray mb-3 overflow-hidden relative">
-                <img 
-                  src={product.image} 
-                  alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
+                <div className="w-full h-full flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform duration-500">
+                  <span className="text-xs font-light">Şəkil</span>
+                </div>
                 {isInCart(product.id) && (
                   <div className="absolute top-2 right-2 bg-green-500 text-white rounded-full p-1">
                     <Check size={16} />
