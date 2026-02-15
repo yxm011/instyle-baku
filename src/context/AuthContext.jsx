@@ -31,13 +31,17 @@ export function AuthProvider({ children }) {
     // Update profile with display name
     await updateProfile(userCredential.user, { displayName })
     
-    // Create user document in Firestore
-    await setDoc(doc(db, 'users', userCredential.user.uid), {
-      displayName,
-      email,
-      createdAt: new Date().toISOString(),
-      cart: []
-    })
+    // Try to create user document in Firestore (optional)
+    try {
+      await setDoc(doc(db, 'users', userCredential.user.uid), {
+        displayName,
+        email,
+        createdAt: new Date().toISOString(),
+        cart: []
+      })
+    } catch (firestoreError) {
+      console.warn('Firestore user creation failed (auth still successful):', firestoreError)
+    }
     
     return userCredential
   }
@@ -51,15 +55,19 @@ export function AuthProvider({ children }) {
   async function signInWithGoogle() {
     const userCredential = await signInWithPopup(auth, googleProvider)
     
-    // Check if user document exists, create if not
-    const userDoc = await getDoc(doc(db, 'users', userCredential.user.uid))
-    if (!userDoc.exists()) {
-      await setDoc(doc(db, 'users', userCredential.user.uid), {
-        displayName: userCredential.user.displayName,
-        email: userCredential.user.email,
-        createdAt: new Date().toISOString(),
-        cart: []
-      })
+    // Try to create user document in Firestore (optional - won't fail auth if Firestore isn't set up)
+    try {
+      const userDoc = await getDoc(doc(db, 'users', userCredential.user.uid))
+      if (!userDoc.exists()) {
+        await setDoc(doc(db, 'users', userCredential.user.uid), {
+          displayName: userCredential.user.displayName,
+          email: userCredential.user.email,
+          createdAt: new Date().toISOString(),
+          cart: []
+        })
+      }
+    } catch (firestoreError) {
+      console.warn('Firestore user creation failed (auth still successful):', firestoreError)
     }
     
     return userCredential

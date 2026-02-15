@@ -30,11 +30,19 @@ export default function LoginPage() {
       setError('')
       setLoading(true)
       await signInWithGoogle()
+      setLoading(false)
       navigate('/')
     } catch (err) {
-      setError('Google ilə giriş uğursuz oldu.')
+      console.error('Google sign-in error:', err)
+      if (err.code === 'auth/popup-closed-by-user') {
+        setError('Giriş ləğv edildi.')
+      } else if (err.code === 'auth/cancelled-popup-request') {
+        setError('Giriş ləğv edildi.')
+      } else {
+        setError('Google ilə giriş uğursuz oldu. Yenidən cəhd edin.')
+      }
+      setLoading(false)
     }
-    setLoading(false)
   }
 
   return (

@@ -60,13 +60,22 @@ const locations = [
 export default function LocationsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative h-[40vh] flex items-center justify-center bg-luxury-dark text-white">
-        <div className="text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-serif font-light mb-4 tracking-wide">
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=1600&q=80)',
+          }}
+        >
+          <div className="absolute inset-0 bg-black/55"></div>
+        </div>
+        
+        <div className="relative z-10 text-center px-4 text-white">
+          <h1 className="text-4xl md:text-6xl font-serif font-light mb-4 tracking-wide drop-shadow-lg">
             Filiallarımız
           </h1>
           <div className="h-px w-24 bg-luxury-gold mx-auto mb-6"></div>
-          <p className="text-lg font-light">
+          <p className="text-lg md:text-xl font-light drop-shadow-md">
             Hər gün 10:00 - 22:00
           </p>
         </div>

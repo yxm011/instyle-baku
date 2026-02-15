@@ -46,11 +46,19 @@ export default function SignupPage() {
       setError('')
       setLoading(true)
       await signInWithGoogle()
+      setLoading(false)
       navigate('/')
     } catch (err) {
-      setError('Google ilə qeydiyyat uğursuz oldu.')
+      console.error('Google sign-up error:', err)
+      if (err.code === 'auth/popup-closed-by-user') {
+        setError('Qeydiyyat ləğv edildi.')
+      } else if (err.code === 'auth/cancelled-popup-request') {
+        setError('Qeydiyyat ləğv edildi.')
+      } else {
+        setError('Google ilə qeydiyyat uğursuz oldu. Yenidən cəhd edin.')
+      }
+      setLoading(false)
     }
-    setLoading(false)
   }
 
   return (
