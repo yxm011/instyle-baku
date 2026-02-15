@@ -89,12 +89,9 @@ export default function HomePage() {
               className="group"
             >
               <div className="aspect-[3/4] bg-luxury-gray mb-4 overflow-hidden">
-                <img 
-                  src={category.image} 
-                  alt={category.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
+                <div className="w-full h-full flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform duration-500">
+                  <span className="text-sm font-light">{category.name}</span>
+                </div>
               </div>
               <h4 className="text-xl font-serif mb-2 luxury-hover">{category.name}</h4>
               <p className="text-gray-600 font-light text-sm">{category.description}</p>
