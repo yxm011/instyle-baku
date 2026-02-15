@@ -24,7 +24,7 @@ export default function HomePage() {
         </div>
         
         <div className="relative z-10 text-center px-4 text-white">
-          <h2 className="text-5xl md:text-7xl font-serif font-light mb-6 tracking-wide drop-shadow-lg">
+          <h2 className="text-3xl sm:text-4xl md:text-7xl font-serif font-light mb-6 tracking-wide drop-shadow-lg">
             Premium Kişi Geyimləri
           </h2>
           <div className="h-px w-32 bg-luxury-gold mx-auto mb-8"></div>
