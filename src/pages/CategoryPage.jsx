@@ -1,11 +1,12 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
-import { ShoppingCart, Check } from 'lucide-react'
+import { ShoppingCart, Check, ArrowLeft } from 'lucide-react'
 import { useState } from 'react'
 import { generateProducts, getCategoryData } from '../data/products'
 
 export default function CategoryPage() {
   const { categoryName } = useParams()
+  const navigate = useNavigate()
   const category = getCategoryData(categoryName)
   const { addToCart, cartItems } = useCart()
   const [addedItems, setAddedItems] = useState({})
@@ -26,6 +27,14 @@ export default function CategoryPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <button
+        onClick={() => navigate(-1)}
+        className="flex items-center gap-2 text-gray-600 luxury-hover mb-8"
+      >
+        <ArrowLeft size={20} />
+        <span>Geri</span>
+      </button>
+
       <div className="mb-12">
         <h1 className="text-4xl md:text-5xl font-serif mb-4 text-center">{category.name}</h1>
         <div className="h-px w-24 bg-luxury-gold mx-auto mb-6"></div>
